@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 The Crossplane Authors <https://crossplane.io>
+#
+# SPDX-License-Identifier: CC0-1.0
+
 apiVersion: networkconnectivity.gcp.upbound.io/v1beta1
 kind: InternalRange
 metadata:
@@ -14,7 +18,7 @@ spec:
       label-a: b
     networkSelector:
       matchLabels:
-        testing.upbound.io/example-name: vpc
+        testing.upbound.io/example-name: default
     peering: FOR_SELF
     usage: FOR_VPC
 
@@ -26,8 +30,8 @@ metadata:
   annotations:
     meta.upbound.io/example-id: networkconnectivity/v1beta1/internalrange
   labels:
-    testing.upbound.io/example-name: vpc
-  name: vpc
+    testing.upbound.io/example-name: default
+  name: default
 spec:
   forProvider:
     autoCreateSubnetworks: false
